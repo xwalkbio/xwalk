@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "xwalk",
+  "displayName": "Xwalk",
+  "version": "0.1.0",
+  "description": "Resolve any protein identifier to a pinned, quality-tiered structure with provenance, and prepare docking receptors. Remote MCP server plus two skills.",
+  "author": { "name": "Xwalk Bio", "email": "hello@xwalk.bio" },
+  "repository": "https://github.com/xwalkbio/xwalk",
+  "license": "Apache-2.0",
+  "keywords": ["protein", "structure", "pdb", "alphafold", "uniprot", "docking"],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "API key",
+      "description": "Your organization's key (starts with cwk_). Sent as a bearer token to the MCP server.",
+      "sensitive": true,
+      "required": true
+    },
+    "mcp_url": {
+      "type": "string",
+      "title": "MCP server URL",
+      "description": "The service's MCP endpoint. Leave the default unless you were given another.",
+      "default": "https://mcp.xwalk.bio/mcp"
+    }
+  }
+}

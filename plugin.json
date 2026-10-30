@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "xwalk",
+  "version": "0.1.0",
+  "description": "Resolve any protein identifier to a pinned, quality-tiered structure with provenance, and prepare docking receptors. Remote MCP server plus two skills.",
+  "author": { "name": "Xwalk Bio", "email": "hello@xwalk.bio" },
+  "repository": "https://github.com/xwalkbio/xwalk",
+  "license": "Apache-2.0",
+  "keywords": ["protein", "structure", "pdb", "alphafold", "uniprot", "docking"]
+}

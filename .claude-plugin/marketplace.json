@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "xwalk",
+  "owner": { "name": "Xwalk Bio", "email": "hello@xwalk.bio" },
+  "plugins": [
+    {
+      "name": "xwalk",
+      "source": "./",
+      "description": "Protein target resolution: pinned, quality-tiered structures with provenance, plus docking receptor preparation."
+    }
+  ]
+}
