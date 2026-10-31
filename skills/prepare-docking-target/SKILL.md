@@ -29,7 +29,7 @@ not choose or rank structures yourself.
    run `scripts/prepare_target.py` from the folder that holds this SKILL.md instead.)
 
    It downloads the structure from its upstream host, keeps the one target chain in contact with the best bound ligand, removes waters and every non-polymer group, and prints JSON with `chain`, `ligand`, `pocket.center` (Å, the ligand's heavy-atom centroid) and `receptor`.
-4. **Report** the pinned `id` (cite it; it reproduces this exact structure), `tier` and `reason`, the chain, the ligand it was bound to, the pocket center and the receptor file path. Say the pocket comes from the co-crystallized ligand.
+4. **Report** the pinned `id` (cite it; it reproduces this exact structure), `tier` and `reason`, the chain, the ligand it was bound to, the pocket center and the receptor file path. Say the pocket comes from the co-crystallized ligand. If `get_structure` returned a `hint` (it does when the best pick for docking is tier C), state the hint before the result so the user knows no tier A or B structure covers the region.
 
 ## Worked example
 
