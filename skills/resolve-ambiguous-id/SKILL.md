@@ -29,7 +29,10 @@ and report the pinned ID.
    - `error`: follow `error.hint` once (for example, fix the parameter), otherwise report it.
 3. If the user needs a structure, not just the target (for example a specific chain of a
    PDB entry they named), call `get_structure(id=<seq_id or str: ID>)`. It returns the pinned
-   `str:` ID with its chains.
+   `str:` ID with its chains. If no region was passed, the tier is against the full UniProt
+   sequence, so a high-resolution structure of one domain is tier C for coverage. Report
+   `tier` and `reason` together. If the user cares about a domain or a purpose, hand off to
+   `get_structure` with `region` and `want` (see the prepare-docking-target skill).
 4. Report the pinned ID and how it was reached (for example "p53, human → P04637 →
    seq:sha256:…"). Cite IDs exactly as returned.
 
@@ -60,3 +63,5 @@ and report the pinned ID.
   before sending it. The service normalizes it, and the response echoes what it matched.
 - Don't cite a PDB code, accession or versionless `str:` ID as the result. Cite the pinned
   `seq:` or `str:` ID the tool returned.
+- Don't report a bare tier letter as a quality verdict. Quote the `reason` string with it;
+  it names the rule that won (resolution, coverage, pLDDT).
